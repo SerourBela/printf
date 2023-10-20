@@ -5,12 +5,12 @@
  * @arg: the input character to be printed
  * Return: always return 1
  */
-int printChar(va_list arg)
+int printChar(va_list arg, char *buf, unsigned int ibuf)
 {
 	char Mychar;
 
 	Mychar = va_arg(arg, int);
-	_putchar(Mychar);
-
+	handl_buf(buf, Mychar, ibuf);
+		
 	return (1);
 }
